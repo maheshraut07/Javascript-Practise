@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit and remove element in dom</title>
+</head>
+<body style = "background-color: #212121; color:#fff">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+    
+</body>
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`    // it is not optimzed to use innerHTML it wil traverse all the html body 
+        const addelement = document.querySelector('.language');
+        // document.body.appendChild(li)   // will attach on body
+        addelement.appendChild(li);
+
+    }
+
+    addLanguage("python")
+    addLanguage("Java")    // this method will traverse all the body of html page hence it could be non optimize for big scale of project so we will use more optimized way 
+
+
+    // optimized  approach for doing the same above thing 
+  
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.append(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+
+    addOptiLanguage("C++");
+
+
+    // Edit the value in html body
+
+    const secondLang = document.querySelector('li:nth-child(2)')
+
+    // not optimized 
+    //1) innerhtml
+    secondLang.innerHTML = "cSharp"
+
+    //2) replacewith
+
+    const newli = document.createElement('li')
+    newli.textContent = "GoLang"
+    secondLang.replaceWith(newli)
+
+    //optimized
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remmove the element 
+
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
+
+</script>
+</html>

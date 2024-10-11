@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 class="heading" id="title">DOm Laarning on chai aur code</h1>
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iste
+        repudiandae enim perferendis, culpa optio et, incidunt atque corporis
+        quisquam, inventore delectus sapiente.
+      </h2>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+      <input type="password">
+
+      <ul>
+        <li>one</li>
+        <li>tow</li>
+        <li>three</li>
+      </ul>
+
+      <ul class="">
+        <li class="list_item">One</li>
+        <li class="list_item">Two</li>
+        <li class="list_item">Three</li>
+        <li class="list_item">Four</li>
+      </ul>*4
+    </div>
+
+    <script>
+
+     // getElementById, getElementByClassName
+      const title = document.getElementsByClassName("heading");
+      console.log(title);
+
+      title.length;
+
+      console.log(title.innerHTML);
+
+      let classtitle = document.getElementsByClassName("heading");
+      console.log(classtitle);
+
+      // queryselector
+
+      let h2ele = document.querySelector('h2');
+      console.log(h2ele)
+
+      document.querySelector('#title')
+      document.querySelector('.heading')
+
+      document.querySelector('input[type = "password"]')
+
+      const myul = document.querySelector('ul')
+     const turnedGreen =  myul.querySelector('li')
+
+     turnedGreen.style.backgroundColor = "green"
+     console.log(turnedGreen)
+
+
+     //querySelectorAll
+
+     const tempLiList = document.querySelectorAll('li')
+     console.log(tempLiList)   // will return node list 
+
+     tempLiList[1].style.backgroundColor = "orange"
+
+     tempLiList.forEach((i) =>{                  // use for each loop instead of map
+            i.style.backgroundColor = "yellow"
+     })
+
+
+     const myH1 = document.querySelectorAll('h1')
+     console.log(myH1)
+     myH1[0].style.backgroundColor = "blue"
+
+
+     // getElementByClassName
+
+     const tempClassList = document.getElementsByClassName('list_item')  // will return html collection 
+       // we cant run for each loop on html collection
+       //tempClassList.forEach((li)=>{}) 
+
+     // we have to convert into array
+
+     const myConvertedArray = Array.from(tempClassList)
+     console.log(myConvertedArray)
+
+
+     myConvertedArray.forEach((li) => {
+        li.style.backgroundColor = "orange";
+        li.innerHTML = "mahesh raut "
+     })
+
+    
+
+
+    </script>
+  </body>
+</html>
