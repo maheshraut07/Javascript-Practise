@@ -13,3 +13,4 @@ const newNum = myNumbers.map((num) => num * 10)                //chaining
 console.log(newNum)
 
 
+ 

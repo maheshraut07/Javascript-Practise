@@ -21,7 +21,7 @@ form.addEventListener('submit', function(e){
     }
 
     else if(weight === '' || weight < 0 || isNaN(weight)){
-        results.innerHTML = `please give a valid height ${weight}` 
+        results.innerHTML = `please give a valid weight ${weight}` 
     }
 
     else {                // calculate the BMI

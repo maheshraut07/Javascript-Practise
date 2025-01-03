@@ -6,7 +6,7 @@ html {
     display: block;
   }
   .canvas {
-    margin: 100px auto 100px;
+    margin: 100px auto;
     width: 80%;
     text-align: center;
   }
